@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+
+.NavigationBarMargin {
+	padding-top: 10px;
+}
+
+.PanelDetails {
+	padding-top: 10px;
+}
+
+.sapUiPanel {
+	border: none;
+	margin-bottom: 20px;
+}
+
+.searchFieldStyle {
+	margin-left: 89%;
+	margin-bottom: 5px;
+}
