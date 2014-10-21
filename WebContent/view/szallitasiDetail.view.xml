@@ -1,0 +1,113 @@
+﻿<core:View controllerName="sap.ui.demo.myFiori.view.szallitasiDetail"
+	xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<Page title="Szállítás részletek" class="sapUiFioriObjectPage"
+		showNavButton="true" navButtonPress="handleNavButtonPress">
+		<IconTabBar select="onSelect" class="iconTabBarPaddingTop" id="idIconTabBarMulti"
+			expanded="{device>/isNoPhone}">
+			<items>
+				<IconTabFilter icon="sap-icon://home" text="Cím">
+					<form:SimpleForm
+						
+						minWidth="400" >
+						<core:Title text="Feladó" />
+      					<Label text="Név"/>
+     					<Text text="{From}" />
+     					<Label text="Irányítószám, Város"/>
+     					<Text text="{FPostalCode}, {FCity}" />
+     					<Label text="Utca, házszám" />
+     					<Text text="{FStreet}"/>									
+						</form:SimpleForm>
+						<form:SimpleForm
+						
+						minWidth="400" >
+						<core:Title text="Címzett" />
+      					<Label text="Név"/>
+     					<Text text="{To}" />
+     					<Label text="Irányítószám, Város"/>
+     					<Text text="{TPostalCode}, {TCity}" />
+     					<Label text="Utca, házszám" />
+     					<Text text="{TStreet}"/>									
+						</form:SimpleForm>
+				</IconTabFilter>
+				<IconTabFilter icon="sap-icon://database" text="Csomag">
+					<Table headerText="Tételek" items="{Items}">
+			<columns>
+				<Column>
+					<header>
+						<Label text="Tétel ID" demandPopin="true" />
+					</header>
+				</Column>
+
+				<Column hAlign="Right">
+					<header>
+						<Label text="Státusz" />
+					</header>
+				</Column>
+			</columns>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier title="{ProductId}" />
+					<ObjectNumber
+						number="{path: 'PickupStatus', formatter:'sap.ui.demo.myFiori.util.Formatter.statusText' }"
+						state="{path: 'PickupStatus', formatter:'sap.ui.demo.myFiori.util.Formatter.statusState' }" />
+				</cells>
+			</ColumnListItem>
+		</Table>
+				</IconTabFilter>
+				<IconTabFilter icon="sap-icon://signature" text="Aláírás">
+					
+<l:VerticalLayout
+		class="marginVerticalContent"
+		width="90%">
+		<l:content>
+			<core:HTML content='&lt;div id=&quot;signature&quot; /&gt;'>
+			</core:HTML>
+		</l:content>
+	</l:VerticalLayout>
+
+				</IconTabFilter>
+				<IconTabFilter icon="sap-icon://payment-approval"
+					text="Utánvét">
+					<VBox binding="{/ProductCollection}" >
+						<RadioButton groupName="GroupA" id="01" select="onSelect"  text="Sikeres"
+							 />
+						<RadioButton groupName="GroupA" id="02" select="onSelect" text="Sikertelen" />
+					</VBox>
+					<VBox binding="{/ProductCollection}" visible="true">
+						<RadioButton groupName="GroupB" id="1" text="Címzett nem található"/>
+						<RadioButton groupName="GroupB" id="2" text="Címzett nem elérhető" />
+						<RadioButton groupName="GroupB" id="3" text="Már megvásárolta" />
+						<RadioButton groupName="GroupB" id="4" text="Nem kéri" />
+						<RadioButton groupName="GroupB" id="5" text="Hibás Áru" />
+						<RadioButton groupName="GroupB" id="6" text="Nem megfelelő áru" />
+						<RadioButton groupName="GroupB" id="7" text="Hibás szerződés adatok" />
+						<RadioButton groupName="GroupB" id="8" text="Nem tudja igazolni magát" />
+						<RadioButton groupName="GroupB" id="9" text="Nem beazonosítható" />
+						<RadioButton groupName="GroupB" id="10" text="Egyéb" />						
+					</VBox>
+					<l:VerticalLayout
+    class="marginVerticalContent"
+    width="100%">
+    <l:content>
+      <TextArea placeholder="Egyéb szöveges ok" rows="8"  />
+    </l:content>
+  </l:VerticalLayout>
+				</IconTabFilter>
+			</items>
+		</IconTabBar>
+
+
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button type="Emphasized" text="Lezár" press="close" width="150px"
+						icon="sap-icon://sys-cancel" />
+				</contentRight>
+				<contentLeft>
+					<Button type="Emphasized" text="Aktivál" press="activate"
+						width="150px" icon="sap-icon://target-group" />
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

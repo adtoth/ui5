@@ -1,0 +1,41 @@
+<core:View controllerName="sap.ui.demo.myFiori.view.bevetMaster"
+	xmlns="sap.m" xmlns:core="sap.ui.core">
+	<Page showNavButton="true" navButtonPress="handleNavButtonPress"
+		title="Bevételezés">
+
+		<List id="list" select="handleListSelect" items="{/Address}">
+			<ObjectListItem type="Active" press="handleListItemPress"
+				title="{From}"
+				icon="sap-icon://customer">
+				
+		 		<firstStatus>
+					<ObjectStatus
+						text="{
+							path: 'SzallitasStatus',
+							formatter: 'sap.ui.demo.myFiori.util.Formatter.statusText'
+						}"
+						state="{
+							path: 'SzallitasStatus',
+							formatter: 'sap.ui.demo.myFiori.util.Formatter.statusState'
+						}"
+						icon="{path: 'Icon'}" />
+
+				</firstStatus> 
+				<attributes>
+					<ObjectAttribute text="Feladó: {From}, {FPostalCode}, {FCity}, {FStreet}" />
+					<ObjectAttribute text="Címzett: {To}, {TPostalCode}, {TCity}, {TStreet}"/>
+	
+				</attributes>
+
+			</ObjectListItem>
+		</List>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button type="Emphasized" text="Scan" press="scan_debug"
+					 width="150px" icon="sap-icon://camera" />
+				</contentRight>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

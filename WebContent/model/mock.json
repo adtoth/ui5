@@ -1,0 +1,128 @@
+﻿{
+    "BusinessPartnerList": [
+        {
+            "BPId": "010",
+            "From": "Parcel Locker",
+            "FCity": "Debrecen",
+            "FPostalCode": "1234",
+            "FStreet": "Somlyai utca 3",
+            "To": "Webox Hungary Kft.",
+            "TCity": "Budapest",
+            "TStreet": "Megyeri út 51.",
+            "TPostalCode": "1044",
+            "SzallitasStatus": "R",
+            "DelStatus": "P",
+            "Icon": "sap-icon://accept",
+            "PicType": "U",
+            "IconPic": "up",
+            "Items": [
+                {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 1",
+                    "ProductID": "HT-1000",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                },
+                {
+                    "UoM": "DB",
+                    "ProductName": "Csomag 2",
+                    "ProductID": "HT-1002",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                },
+                {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 3",
+                    "ProductID": "HT-1004",
+                    "Quantity": "1",
+                    "Pick up status": "A"
+                },
+                 {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 4",
+                    "ProductID": "012345",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                },
+                 {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 5",
+                    "ProductID": "01234565",
+                    "Quantity": "1",
+                    "Pick up status": "A"
+                },
+                {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 6",
+                    "ProductID": "12345670",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                }
+                               
+                
+            ]
+        },
+		{
+            "BPId": "010",
+            "From": "Parcel Locker",
+            "FCity": "Debrecen",
+            "FPostalCode": "1234",
+            "FStreet": "Somlyai utca 3",
+            "To": "Webox Hungary Kft.",
+            "TCity": "Budapest",
+            "TStreet": "Megyeri út 51.",
+            "TPostalCode": "1044",
+            "SzallitasStatus": "C",
+            "DelStatus": "M",
+            "Icon": "sap-icon://warning",
+            "PicType": "D",
+            "IconPic": "down",
+            "Items": [
+                {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 1",
+                    "ProductID": "HT-1000",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                },
+                {
+                    "UoM": "DB",
+                    "ProductName": "Csomag 2",
+                    "ProductID": "HT-1002",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                },
+                {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 3",
+                    "ProductID": "HT-1004",
+                    "Quantity": "1",
+                    "Pick up status": "A"
+                },
+                 {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 4",
+                    "ProductID": "012345",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                },
+                 {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 5",
+                    "ProductID": "01234565",
+                    "Quantity": "1",
+                    "Pick up status": "A"
+                },
+                {
+                	"UoM": "DB",
+                    "ProductName": "Csomag 6",
+                    "ProductID": "12345670",
+                    "Quantity": "1",
+                    "Pick up status": "M"
+                }
+                               
+                
+            ]
+        }
+    ]
+}

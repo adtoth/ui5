@@ -1,28 +1,32 @@
-<!DOCTYPE HTML>
-<!-- Auto-Generated Application. Version: 2.6.100 -->
+<!DOCTYPE html>
 <html>
-       <head>
-			  <meta content="IE=edge" http-equiv="X-UA-Compatible">
-				<link rel="stylesheet" type="text/css" href="css/styles.css" />
-   			   <script id="sap-ui-bootstrap"
-				      type="text/javascript"
-					  src="./resources/sap-ui-core.js"
-					  data-sap-ui-theme="sap_goldreflection"
-					  data-sap-ui-libs="sap.ui.commons,sap.ui.ux3,sap.ui.table" >
-			  </script>
-			  <script src = "phonegap.js" ></script>
-			 
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="UTF-8">
 
-   			  <script>
-                     sap.ui.localResources("multiple_tab_app2");
-                     var view = sap.ui.view({id:"ID_newView1", viewName:"multiple_tab_app2.resources.newView1", type:sap.ui.core.mvc.ViewType.JS});
-   			         view.placeAt("content");
-   			         
-   			  </script>
+		<title>G4S Futár app</title>
+		
+<!-- 		<script type="text/javascript" src="cordova.js"></script> -->
+		<script
+			id="sap-ui-bootstrap"
+			src="resources/sap-ui-core.js"
+			data-sap-ui-theme="sap_bluecrystal"
+			data-sap-ui-libs="sap.m"
+			data-sap-ui-xx-bindingSyntax="complex"
+			data-sap-ui-resourceroots='{
+				"sap.ui.demo.myFiori": "./"
+			}' >
+		</script>
 
-       </head>
-       <body class="sapUiBody" role="application">
-              <div id="content"></div>
-              
-       </body>
+		<script>
+			new sap.m.Shell({
+				app : new sap.ui.core.ComponentContainer({
+					name : "sap.ui.demo.myFiori"
+				})
+			}).placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" id="content">
+	</body>
 </html>

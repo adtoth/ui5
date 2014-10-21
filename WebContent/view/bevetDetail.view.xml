@@ -1,0 +1,67 @@
+﻿<core:View controllerName="sap.ui.demo.myFiori.view.bevetDetail"
+	xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+	<Page title="Bevételezés részletek" class="sapUiFioriObjectPage"
+		showNavButton="true" navButtonPress="handleNavButtonPress">
+		<ObjectHeader title="{id}">
+		<firstStatus>
+					<ObjectStatus
+						text="{
+							path: 'SzallitasStatus',
+							formatter: 'sap.ui.demo.myFiori.util.Formatter.statusText'
+						}"
+						state="{
+							path: 'SzallitasStatus',
+							formatter: 'sap.ui.demo.myFiori.util.Formatter.statusState'
+						}"
+						icon="{path: 'Icon'}" />
+
+				</firstStatus>
+				<attributes>
+					<ObjectAttribute text="Feladó: {From}, {FPostalCode}, {FCity}, {FStreet}" />
+					<ObjectAttribute text="Címzett: {To}, {TPostalCode}, {TCity}, {TStreet}"/>
+	
+				</attributes>
+
+		</ObjectHeader>
+
+		<Table headerText="Tételek" items="{Items}">
+			<columns>
+				<Column>
+					<header>
+						<Label text="Tétel ID" demandPopin="true" />
+					</header>
+				</Column>
+
+				<Column hAlign="Right">
+					<header>
+						<Label text="Státusz" />
+					</header>
+				</Column>
+			</columns>
+			<ColumnListItem>
+				<cells>
+					<ObjectIdentifier title="{ProductId}" />
+					<ObjectNumber
+						number="{path: 'PickupStatus', formatter:'sap.ui.demo.myFiori.util.Formatter.statusText' }"
+						state="{path: 'PickupStatus', formatter:'sap.ui.demo.myFiori.util.Formatter.statusState' }" />
+				</cells>
+			</ColumnListItem>
+		</Table>
+
+
+		<footer>
+			<Bar>
+				<contentRight>
+
+					<Button type="Emphasized" text="Scan" press="scan_debug"
+					 width="150px" icon="sap-icon://camera" />
+				</contentRight>
+
+				<contentLeft>
+					<Button type="Emphasized" text="Lezár" press="close"
+						width="150px" icon="sap-icon://sys-cancel" />
+				</contentLeft>
+			</Bar>
+		</footer>
+	</Page>
+</core:View>
